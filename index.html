@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Agis Maciel" />
+    <!-- Mecanismos de busca -->
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="combustível, combustivel, app, web, webapp, etanol, gasolina, melhor, senai, alex, machado, ribeiro, desenvolvedor, desenvolvimento, desenvolvido, noturno, front, end, front-end, instrutor, ti, html, css, javascript" />
+    <meta name="description" content="Webapp desenvolvido por Agis Maciel, aluno do curso de Front-End do SENAI, instruido pelo instrutor Alex Machado." />
+    <img src="imagens/posto.jpg" alt="Trabalhando com código" />
+
+    <title>Combustivel</title>
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>App Combustível</h1>
+            <hr /><br />
+            <h2 id="result"></h2>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <form onsubmit="return false;" class="fomulario">
+                <label>Valor da Gasolina:</label><br />
+                   <div class="single-input">
+                        <input type="text" placeholder="0,00" id="gasolina" onkeydown="function verificarInput(event);"/>
+                        <label>R$</label>
+                   </div>
+                <br /><br />
+                <label>Valor do Etanol:</label><br />
+                    <div class="single-input">
+                        <input type="text"  placeholder="0,00" id="etanol" required class="input" onkeydown="verificarInput(event)"/>
+                        <label aria-disabled="">R$ </label><br />
+                    </div>
+                    <div class="btn">
+                        <button onclick="combustivel();">Calcular</button>
+                    </div>
+                <br />
+                <br />
+                    <div id="result"></div>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
